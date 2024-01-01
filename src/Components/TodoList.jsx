@@ -12,7 +12,7 @@ const TodoList = () => {
         setListItems(merged)
     }
 */
-
+    //functional Update 
     const handelAddClick = (event, name, date) => {
         const merged = [...listItems, { name: name, dueDate: date }]
         setListItems((current) => [...current, { name: name, dueDate: date }])
