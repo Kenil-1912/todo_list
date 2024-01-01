@@ -5,19 +5,21 @@ import { InputText } from 'primereact/inputtext';
 import styles from './imputes.module.css'
 
 const Inputs = ({ handelAddClick }) => {
-    const [date, setDate] = useState();
-    const [names, setNames] = useState();
+    // const [date, setDate] = useState();
+    //  const [names, setNames] = useState();
     const nameRef = useRef();
     const dateRef = useRef();
-    const handelOnNameChange = (event) => {
-        setNames(event.target.value)
-    }
 
-    /* const handelOnDateChange = (event) => {
-         //setDate(event.target.value)
-         console.log(event.target.value);
-         setDate(event.target.value);
-     }*/
+    /* 
+   const handelOnNameChange = (event) => {
+       setNames(event.target.value)
+   }
+
+  const handelOnDateChange = (event) => {
+        //setDate(event.target.value)
+        console.log(event.target.value);
+        setDate(event.target.value);
+    }*/
 
     const handelAddClickInternal = (event) => {
         const refname = nameRef.current.value;
