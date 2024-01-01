@@ -7,9 +7,16 @@ const TodoList = () => {
     const item = [];
     const [listItems, setListItems] = useState([]);
 
-    const handelAddClick = (event, name, date) => {
+    /* const handelAddClick1 = (event, name, date) => {
         const merged = [...listItems, { name: name, dueDate: date }]
         setListItems(merged)
+    }
+*/
+
+    const handelAddClick = (event, name, date) => {
+        const merged = [...listItems, { name: name, dueDate: date }]
+        setListItems((current) => [...current, { name: name, dueDate: date }])
+
 
     }
 
