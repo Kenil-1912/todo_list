@@ -5,7 +5,6 @@ import { Button } from 'primereact/button';
 
 
 const ListItem = ({ items, deleteClick, }) => {
-    console.log(items);
     return (
         <div className={`${styles.item}`}>
             <div className='container'>
