@@ -17,22 +17,28 @@ const Inputs = ({ handelAddClick }) => {
         console.log(event.target.value);
         setDate(event.target.value);
     }
+
+    const handelAddClickInternal = (event) => {
+        handelAddClick(event, names, date)
+        event.preventDefault();
+    }
     return (
         <div>
 
             <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <InputText type='text' onChange={handelOnNameChange} />
+                <form onSubmit={handelAddClickInternal}>
+                    <div className="row">
+                        <div className="col">
+                            <InputText type='text' value={names} onChange={handelOnNameChange} />
+                        </div>
+                        <div className="col">
+                            <input type='date' className='form-control' value={date} onChange={handelOnDateChange} />
+                        </div>
+                        <div className="col">
+                            <Button className={`${styles.Addbutton}`}><AiOutlinePlusCircle /></Button>
+                        </div>
                     </div>
-                    <div className="col">
-                        <input type='date' className='form-control' onChange={handelOnDateChange} />
-                    </div>
-                    <div className="col">
-                        <Button className={`${styles.Addbutton}`} onClick={(event) => { handelAddClick(event, names, date) }
-                        }><AiOutlinePlusCircle /></Button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div >
     )
