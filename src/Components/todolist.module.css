@@ -1,0 +1,18 @@
+/* Existing styles for .listItem */
+.listItem {
+    border: 2px solid black;
+    margin: 25px;
+    margin-right: 900px;
+    border-radius: 15px;
+}
+
+/* Additional styles for centering Maincontainer */
+.Maincontainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Optionally, adjust width or other properties */
+.listCss {
+    width: -webkit-fill-available;
+}
